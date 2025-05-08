@@ -10,7 +10,7 @@ import styled from 'styled-components';
 import { loginUser } from '../redux/userRelated/userHandle';
 import Popup from '../components/Popup';
 
-const defaultTheme = createTheme();
+const customTheme = createTheme();
 
 const LoginPage = ({ role }) => {
 
@@ -122,7 +122,7 @@ const LoginPage = ({ role }) => {
     }, [status, currentRole, navigate, error, response, currentUser]);
 
     return (
-        <ThemeProvider theme={defaultTheme}>
+        <ThemeProvider theme={customTheme}>
             <Grid container component="main" sx={{ height: '100vh' }}>
                 <CssBaseline />
                 <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
@@ -133,12 +133,13 @@ const LoginPage = ({ role }) => {
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
+                           
                         }}
                     >
-                        <Typography variant="h4" sx={{ mb: 2, color: "#2c2143" }}>
+                        <Typography variant="h4" gutterBottom sx={{ color:'blue'}} style={{ fontWeight: 'bold' }}>
                             {role} Login
                         </Typography>
-                        <Typography variant="h7">
+                        <Typography variant="h7"  gutterBottom sx={{ color:'green'}}>
                             Welcome back! Please enter your details
                         </Typography>
                         <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 2 }}>
