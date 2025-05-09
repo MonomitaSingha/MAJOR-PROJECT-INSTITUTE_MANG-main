@@ -222,7 +222,7 @@ const LoginPage = ({ role }) => {
                                     </StyledLink>
                                 </Grid>
                             )}
-                        </Box>kkkkk
+                        </Box>
                     </Box>
                 </Paper>
             </Box>
